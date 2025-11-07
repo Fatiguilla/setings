@@ -1,0 +1,171 @@
+/* ============================
+   ESTILOS GENERALES Y EDITABLES
+============================ */
+:root {
+  --color-principal: #e6b800;
+  --color-secundario: #fff3cd;
+  --color-texto: #333;
+  --fuente-principal: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
+  line-height: 1.6;
+}
+
+/* ============================
+   PORTADA (INICIO)
+============================ */
+.portada {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffeb99, #f5d142);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portada h1 {
+  font-size: 3rem;
+  color: #704800;
+  margin-bottom: 50px;
+}
+
+.botones-inicio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  background: var(--color-principal);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #cc9a00;
+}
+
+/* ============================
+   NAVEGACIÓN SUPERIOR
+============================ */
+.barra {
+  background: var(--color-principal);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+}
+
+.btn-nav {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background: #cc9a00;
+}
+
+/* ============================
+   CONTENIDO GENERAL
+============================ */
+.contenido {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contenido h1 {
+  color: #704800;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.img-grande {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 15px;
+}
+
+/* ============================
+   PRODUCTOS
+============================ */
+.galeria-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.producto p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   PROCESO DE ENVASADO
+============================ */
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.fila.invertida {
+  flex-direction: row-reverse;
+}
+
+.fila img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.fila p {
+  max-width: 400px;
+  text-align: justify;
+}
+
+/* ============================
+   RESPONSIVIDAD
+============================ */
+@media (max-width: 768px) {
+  .portada h1 {
+    font-size: 2.2rem;
+  }
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+  .fila {
+    flex-direction: column;
+  }
+  .fila.invertida {
+    flex-direction: column;
+  }
+}
